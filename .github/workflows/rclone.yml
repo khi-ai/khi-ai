@@ -1,0 +1,24 @@
+name: Rclone
+
+on:
+  schedule:
+    - cron: '30 */3 * * *' 
+  workflow_dispatch: 
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download config file
+        run: | 
+          mkdir -p ~/.config/rclone/rclone.conf
+          curl -o ~/.config/rclone/rclone.conf ${{ secrets.RCLONE_URI }}          
+      - name: Install Rclone
+        run: |
+          sudo -v ; curl https://rclone.org/install.sh | sudo bash
+      - name: Rclone Copy
+        run: |
+          rclone copy mega: dropbox:MEGA -P
+      - name: Clean Up
+        run: rm ~/.config/rclone/rclone.conf

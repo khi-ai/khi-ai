@@ -1,0 +1,23 @@
+name: Gick Up
+
+on:
+  schedule:
+    - cron: '0 * * * *' 
+  workflow_dispatch: 
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download config file
+        run: curl -o config_file.yml ${{ secrets.GICKUP_URI }}          
+      - name: Install Gick Up
+        run: |
+          curl -L -o gickup_0.10.32_linux_amd64.tar.gz https://github.com/cooperspencer/gickup/releases/download/v0.10.32/gickup_0.10.32_linux_amd64.tar.gz
+          tar -xzf gickup_0.10.32_linux_amd64.tar.gz
+          chmod +x gickup
+      - name: Gick Up
+        run: ./gickup config_file.yml --quiet
+      - name: Clean Up
+        run: rm config_file.yml
