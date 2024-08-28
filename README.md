@@ -1,5 +1,7 @@
 ## Hi there 👋
 
+![image](https://github.com/user-attachments/assets/cc16ced7-cb2a-4426-bbb4-3dc248f55918)
+
 <!--
 **khi-ai/khi-ai** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
