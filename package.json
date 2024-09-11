@@ -1,0 +1,11 @@
+{
+  "name": "khi-ai",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build:dns": "hostlist-compiler -c ./dns/config.json -o ./dns/index.html"
+  },
+  "devDependencies": {
+    "@adguard/hostlist-compiler": "^1.0.29"
+  }
+}
