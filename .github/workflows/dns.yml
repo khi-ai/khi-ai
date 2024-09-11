@@ -1,25 +1,31 @@
-name: Rclone
+name: DNS Publish
 
 on:
   schedule:
-    - cron: '30 */3 * * *' 
+    - cron: '30 * * * *' 
   workflow_dispatch: 
 
 jobs:
-  backup:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Download config file
         run: | 
           mkdir -p ~/.config/rclone
           curl -o ~/.config/rclone/rclone.conf ${{ secrets.RCLONE_URI }}          
-      - name: Install Rclone
+      - name: Install Rclone 
         run: |
           sudo -v ; curl https://rclone.org/install.sh | sudo bash
-      - name: Rclone Copy
+      - name: DNS compiler
         run: |
-          # rclone copy mega: dropbox:MEGA --quiet
-          rclone copy od: "gd:/One Drive" --quiet
+          bun install
+          bun build:dns
+      - name: Publish DNS
+        run: |
+          rclone copy ./dns dns:khi_dot_dns --quiet --sftp-set-modtime=false
       - name: Clean Up
         run: rm ~/.config/rclone/rclone.conf
