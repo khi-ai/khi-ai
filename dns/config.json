@@ -75,16 +75,6 @@
       ]
     },
     {
-      "name": "antipopads:re",
-      "source": "https://raw.githubusercontent.com/AdroitAdorKhan/antipopads-re/master/formats/domains.txt",
-      "type": "adblock",
-      "transformations": [
-        "RemoveComments",
-        "Compress",
-        "Validate"
-      ]
-    },
-    {
       "name": "HaGeZi's Ultimate Blocklist",
       "source": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt",
       "type": "adblock",
@@ -95,8 +85,8 @@
       ]
     },
     {
-      "name": "1Hosts Pro",
-      "source": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Pro/domains.wildcards",
+      "name": "1Hosts Lite",
+      "source": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/domains.wildcards",
       "type": "adblock",
       "transformations": [
         "RemoveComments",
@@ -115,26 +105,6 @@
       ]
     },
     {
-      "name": "Pop Ads",
-      "source": "https://raw.githubusercontent.com/AdroitAdorKhan/antipopads-re/master/formats/domains.txt",
-      "type": "adblock",
-      "transformations": [
-        "RemoveComments",
-        "Compress",
-        "Validate"
-      ]
-    },
-      {
-      "name": "Goodbye Ads",
-      "source": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt",
-      "type": "adblock",
-      "transformations": [
-        "RemoveComments",
-        "Compress",
-        "Validate"
-      ]
-    },
-        {
       "name": "AdAway Default Blocklist",
       "source": "https://adaway.org/hosts.txt",
       "type": "hosts",

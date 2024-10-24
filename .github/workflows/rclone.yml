@@ -20,6 +20,6 @@ jobs:
       - name: Rclone Copy
         run: |
           # rclone copy mega: dropbox:MEGA --quiet
-          rclone copy od: "gd:/One Drive" --quiet
+          # rclone copy od: "gd:/One Drive" --quiet
       - name: Clean Up
         run: rm ~/.config/rclone/rclone.conf
