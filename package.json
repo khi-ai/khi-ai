@@ -7,5 +7,8 @@
   },
   "devDependencies": {
     "@adguard/hostlist-compiler": "^1.0.29"
+  },
+  "dependencies": {
+    "-": "^0.0.1"
   }
 }

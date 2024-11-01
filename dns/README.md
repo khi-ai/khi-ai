@@ -1,58 +1,37 @@
-# Khi-AI: DNS Block List for AdGuardHome
+# khi-ai DNS Block List
 
-Khi-AI provides a DNS block list for AdGuardHome, offering protection against ads, malicious sites, and other unwanted content.
+**khi-ai/khi-ai** is a powerful DNS block list intended for use with DNS-based ad-blocking systems like AdGuardHome. This list combines multiple sources to provide thorough protection against ads, tracking, malware, phishing, and other online threats.
 
-## Overview
+- **Public URL:** [https://khi.mdbgo.io](https://khi.mdbgo.io)
+- **Source Code:** [GitHub](https://github.com/khi-ai/khi-ai)
+- **License:** GPLv3
 
-This repository includes a comprehensive DNS block list configuration tailored for AdGuardHome, compiled from various reliable sources. Each list has been processed to remove empty lines, comments, and duplicate entries, ensuring optimal performance.
+---
 
-## Source List Configuration
+## Description
 
-The following sources are included in this block list configuration:
+The **khi-ai** block list integrates trusted sources from across the internet to provide a robust defense against online threats and unwanted content. Below is a list of sources included in the filter, each providing a specific type of protection. This block list is continuously updated and optimized for best performance in DNS-level filtering environments like AdGuard Home.
 
-| Name | Source URL |
-|------|------------|
-| AdGuard DNS filter | [link](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt) |
-| AdGuard MobileFilter | [link](https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/specific_app.txt) |
-| VNM: ABPVN List | [link](https://abpvn.com/android/abpvn.txt) |
-| bigdargon - hostsVN | [link](https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/domain.txt) |
-| NoCoin Filter List | [link](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt) |
-| ZeroDot1 - CoinBlockerLists | [link](https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser) |
-| OISD Big List | [link](https://big.oisd.nl) |
-| antipopads:re | [link](https://raw.githubusercontent.com/AdroitAdorKhan/antipopads-re/master/formats/domains.txt) |
-| HaGeZi's Ultimate Blocklist | [link](https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt) |
-| 1Hosts Lite | [link](https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/domains.wildcards) |
-| Hosts Extras | [link](https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts) |
-| Pop Ads | [link](https://raw.githubusercontent.com/AdroitAdorKhan/antipopads-re/master/formats/domains.txt) |
-| Goodbye Ads | [link](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt) |
-| AdAway Default Blocklist | [link](https://adaway.org/hosts.txt) |
-| Dan Pollock's List | [link](https://someonewhocares.org/hosts/zero/hosts) |
-| WindowsSpyBlocker - Hosts spy rules | [link](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt) |
-| Scam Blocklist by DurableNapkin | [link](https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt) |
-| The Big List of Hacked Malware Web Sites | [link](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hosts) |
-| Online Malicious URL Blocklist (AdGuard Home) | [link](https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-agh.txt) |
-| GoodbyeAds-Spotify | [link](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt) |
-| Porn List (NL) | [link](https://blocklistproject.github.io/Lists/alt-version/porn-nl.txt) |
+---
 
-## Transformations
+## Sources Overview
 
-The following transformations are applied to each list to ensure quality and consistency:
-- **RemoveComments**: Strips out any comment lines.
-- **Compress**: Reduces file size for optimal performance.
-- **Validate**: Ensures each entry meets DNS block list requirements.
-- **Deduplicate**: Removes duplicate entries.
-- **TrimLines**: Cleans up leading and trailing whitespace.
-- **InsertFinalNewLine**: Ensures the file ends with a newline.
-- **RemoveEmptyLines**: Eliminates any blank lines.
+| Source Name | Description |
+|-------------|-------------|
+| [**AdGuard DNS Filter**](https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt) | AdGuard's primary filter for blocking ads and trackers across various devices. |
+| [**AdGuard MobileFilter**](https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/specific_app.txt) | Specific ad-blocking rules for mobile applications, enhancing in-app ad blocking. |
+| [**ABPVN List**](https://abpvn.com/android/abpvn.txt) | A popular ad block list tailored for Vietnamese users, focusing on regional ads. |
+| [**hostsVN by bigdargon**](https://raw.githubusercontent.com/bigdargon/hostsVN/master/option/domain.txt) | Blocks ads, trackers, and unwanted content commonly encountered in Vietnam. |
+| [**NoCoin Filter List**](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt) | Dedicated to blocking cryptocurrency mining scripts on websites. |
+| [**CoinBlockerLists by ZeroDot1**](https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser) | Protects against websites that attempt to use visitors' devices for mining cryptocurrency. |
+| [**OISD Big List**](https://big.oisd.nl) | A large, well-maintained list that blocks ads, trackers, and malicious sites. |
+| [**HaGeZi's Ultimate Blocklist**](https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt) | Comprehensive ad block list targeting ads, trackers, and potentially harmful sites. |
+| [**1Hosts Lite**](https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/domains.wildcards) | Lightweight block list for general ad blocking and privacy protection. |
+| [**AdAway Default Blocklist**](https://adaway.org/hosts.txt) | Standard list from AdAway to block ads across Android devices. |
+| [**WindowsSpyBlocker**](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt) | Blocks telemetry and unwanted tracking by Microsoft on Windows devices. |
+
+---
 
 ## License
 
-This project is licensed under the GPLv3 License. See the [LICENSE](LICENSE) file for details.
-
-## Contribution
-
-Contributions are welcome! Please make sure to follow the guidelines in the repository for contributing to ensure all lists remain consistent and effective.
-
-## Contact
-
-For more information, visit the [homepage](https://github.com/khi-ai/khi-ai).
+This project is licensed under the **GPLv3** license. See [LICENSE](LICENSE) for more details.
